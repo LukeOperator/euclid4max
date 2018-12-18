@@ -76,15 +76,15 @@ function calc(a,b,c,d,e) {
         bar[_space] += 1;
       }
 
-      //some permutations are only accessible by retrogrades of this algorithm
-      if(rev){
-        bar.reverse();
-      }
-
       //rotate the beats in the bar
       for (i=0; i< rot; i++) {
         var pop = bar.pop();
         bar.unshift(pop);
+      }
+	    
+	//some permutations are only accessible by retrogrades of this algorithm
+      if(rev){
+        bar.reverse();
       }
 
     }
